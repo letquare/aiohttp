@@ -1,0 +1,5 @@
+common:
+  port: 8080
+postgres:
+  database_url: postgres://root:0000@db:5432/postgres
+  require_ssl: false
