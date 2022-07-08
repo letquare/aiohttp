@@ -99,3 +99,9 @@ class GetJsonWebToken(web.View):
     @staticmethod
     async def _get_token(log):
         return jwt.encode({"login": f'{log}', "scopes": [f"create_by: project"]}, SECRET).decode('utf8')
+
+
+class Hello(web.View):
+
+    async def get(self):
+        return web.json_response({'Status': 'OK', 'Message': 'Server is work!'})
